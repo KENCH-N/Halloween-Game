@@ -85,7 +85,7 @@ function groundFloor() {
 function thirdFloor(){
     document.getElementById("para4").innerHTML= "You Arrive, Noticing Little Of Interest, Until You Hear Voices";
     let choiceY = prompt("What Will You Do Next? Run Away And Return To The Ground Floor (A), Follow The Sound Of Voices (B)");
-    }
+    
     if (choiceY == "A"){
         document.getElementById("para6").innerHTML = "You've Reached The Ground Floor Once More. It Has Become Significantly Darker Outside";
     choice1();
@@ -94,5 +94,6 @@ function thirdFloor(){
         document.getElementById("para6").innerHTML = "You Walk In Circles For What Feels Like Hours, Until You Realise The Voices Are On The Roof";
         document.getElementById("para6").innerHTML = "You Climb The Stairwell Ladder Onto The Roof, Seeing A Circle Of Cloaked Figures";
         
+}
 }
 

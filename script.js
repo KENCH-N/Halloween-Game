@@ -1,4 +1,4 @@
-let name, choiceO;
+let name, choiceO, choiceQ, choice;
 
 function startGame() {
     alert("Game Has Started");

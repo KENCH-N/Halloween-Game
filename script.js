@@ -28,7 +28,7 @@ function choice1() {
 function choice2() {
     let choiceW = prompt("Do you Scream? (A), Fight Him (B), Or Run? (C)");
     if (choiceW == "A") {
-        document.getElementById("para")
+        document.getElementById("para8").innerHTML = "You Scream, And He Sees You, He Runs Towards You And Chops You In Half";
     }
 }
 function basement() {
@@ -40,11 +40,11 @@ function basement() {
     }
     if (choiceQ == "B") {
         document.getElementById("para6").innerHTML = "You Walk Further In.";
-        document.getElementById("para7");
+        document.getElementById("para7").innerHTML = "You See A Man With A Chainsaw Chopping People's Limbs Off Alive";
         choice2();
     }
     if (choiceQ == "C") {
-        document.getElementById("para6").innerHTML = "You Get Blood In Your Open Wound And Die Immediately";
+        document.getElementById("para6").innerHTML = "You Get Blood In Your Eye And Die Immediately";
         document.getElementById("death").innerHTML = "YOU ARE DEAD"
         document.getElementById("death").style.font = 500;
         
@@ -53,9 +53,9 @@ function basement() {
 
 
 function thirdFloor(){
-    document.getElementById("para4").innerHTML= "You Arrive, Noticing Little Of Interest, Until You Hear Voices
-    let choiceY = prompt("What Will You Do Next? Run Away And Return To The Ground Floor (A), Follow The Sound O) Voices (B)
-
-    if (choiceY == "A")
-        document.getElementById("para6").innerHTML = "You've Reached The Ground Floor Once More. It Has Become Significan"ly Darker Outside}
-    choichoice1
+    document.getElementById("para4").innerHTML= "You Arrive, Noticing Little Of Interest, Until You Hear Voices";
+    let choiceY = prompt("What Will You Do Next? Run Away And Return To The Ground Floor (A), Follow The Sound Of Voices (B)");
+    }
+    if (choiceY == "A"){
+        document.getElementById("para6").innerHTML = "You've Reached The Ground Floor Once More. It Has Become Significantly Darker Outside";
+    choice1();}

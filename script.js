@@ -10,5 +10,52 @@ function startGame() {
 
 function choice1() {
     document.getElementById("para2").innerHTML = "Where Do You Want To Go";
-    choiceO = prompt
+    choiceO = prompt("The Basement (A), the Ground Floor (B), the 2nd Floor (C), or the 3rd Floor(D)")
+    if (choiceO == "A") {
+        document.getElementById("para3").innerHTML = "You Have Arrived In The Basement";
+    }
+    if (choiceO == "B") {
+        document.getElementById("para3").innerHTML = "You Continud On The Ground Floor";
+    }
+    if (choiceO == "C") {
+        document.getElementById("para3").innerHTML = "You Have Arrived On The Second Floor";
+    }
+    if (choiceO == "D") {
+        document.getElementById("para3").innerHTML = "You Have Arrived On The Third Floor";
+    }
 }
+
+function choice2() {
+    let choiceW = prompt("Do you Scream? (A), Fight Him (B), Or Run? (C)");
+    if (choiceW == "A") {
+        document.getElementById("para")
+    }
+}
+function basement() {
+    document.getElementById("para4").innerHTML = "You Find Human Parts Laying Around Randomly";
+    let choiceQ = prompt("What Do You Do? Run Away And Return To The Ground Floor (A), Investigate Further (B), Play With Human Parts (C).");
+    if (choiceQ == "A") {
+        document.getElementById("para6").innerHTML = "You Pee You Pants And Run Away.";
+        choice1();
+    }
+    if (choiceQ == "B") {
+        document.getElementById("para6").innerHTML = "You Walk Further In.";
+        document.getElementById("para7");
+        choice2();
+    }
+    if (choiceQ == "C") {
+        document.getElementById("para6").innerHTML = "You Get Blood In Your Open Wound And Die Immediately";
+        document.getElementById("death").innerHTML = "YOU ARE DEAD"
+        document.getElementById("death").style.font = 500;
+        
+    }
+}
+
+
+function thirdFloor(){
+    document.getElementById("para4").innerHTML= "You Arrive, Noticing Little Of Interest, Until You Hear Voices
+    let choiceY = prompt("What Will You Do Next? Run Away And Return To The Ground Floor (A), Follow The Sound O) Voices (B)
+
+    if (choiceY == "A")
+        document.getElementById("para6").innerHTML = "You've Reached The Ground Floor Once More. It Has Become Significan"ly Darker Outside}
+    choichoice1

@@ -1,6 +1,7 @@
 let name, choiceO, choiceQ, choice;
 
-function clear() {
+
+function clear1() {
     document.getElementById("para1").innerHTML = "";
     document.getElementById("para2").innerHTML = "";
     document.getElementById("para3").innerHTML = "";
@@ -14,7 +15,7 @@ function startGame() {
     document.getElementById("para1").innerHTML = "You Are At The Entrance Of All Saints";
     document.getElementById("button1").style.display = "inline";
     document.getElementById("button1").innerHTML = "Click To Choose";
-    document.getElementById("button1").setAttribute("onclick", "choice1()");
+    document.getElementById("button1").setAttribute("onclick", "clear1(); choice1()");
 }
 
 
@@ -63,7 +64,9 @@ function choice3() {
     let choiceQ = prompt("What Do You Do? Run Away And Return To The Ground Floor (A), Investigate Further (B), Play With Human Parts (C).");
     if (choiceQ == "A") {
         document.getElementById("para3").innerHTML = "You Pee You Pants And Run Away.";
-        choice1();
+        document.getElementById("button1").style.display = "inline";
+        document.getElementById("button1").innerHTML = "Click To Choose";
+        document.getElementById("button1").setAttribute("onclick", "clear1(), choice1();");
     }
     if (choiceQ == "B") {
         document.getElementById("para3").innerHTML = "You Walk Further In.";
@@ -112,7 +115,7 @@ function choice5() {
         document.getElementById("para3").innerHTML = "You've Reached The Ground Floor Once More. It Has Become Significantly Darker Outside";
         document.getElementById("button1").style.display = "inline";
         document.getElementById("button1").innerHTML = "Click To Choose";
-        document.getElementById("button1").setAttribute("onclick", "choice1()");
+        document.getElementById("button1").setAttribute("onclick", "clear1(); choice1()");
     }
     if (choiceY == "B"){
         document.getElementById("para3").innerHTML = "You Walk In Circles For What Feels Like Hours, Until You Realise The Voices Are On The Roof";
@@ -133,7 +136,7 @@ function choiceR(){
     let choiceM = prompt("Do You Freeze (A), Jump (B), Call Out(C)")
     if (choiceM == "A"){
         document.getElementById("para5").innerHTML = "You Feel Dizzy And Suddenly Black Out";
-    dead();
+        dead();
     }
     if (choiceM == "B"){
         document.getElementById("para5").innerHTML = "You Jump, Closing Your Eyes And Bracing For Impact";
@@ -149,5 +152,5 @@ function secondFloor(){
     document.getElementById("para2").innerHTML ="The Door Is Barred, And Will Not Open"
     document.getElementById("button1").style.display = "inline";
     document.getElementById("button1").innerHTML = "Click To Choose";
-    document.getElementById("button1").setAttribute("onclick", "choice1()");
+    document.getElementById("button1").setAttribute("onclick", "clear1(); choice1()");
 }

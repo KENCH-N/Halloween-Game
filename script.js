@@ -9,8 +9,8 @@ function startGame() {
 }
 
 function dead() {
-    document.getElementById("death").innerHTML = "YOU ARE DEAD"
-    document.getElementById("death").style.font = 500;
+    document.getElementById("death").innerHTML = "YOU ARE DEAD, Refresh Page To Play Again";
+    document.getElementById("death").style.fontSize = "50px";
 }
 
 function choice1() {
@@ -37,7 +37,11 @@ function choice2() {
         dead();
     }
     if (choiceW == "B") {
-        document.getElementById("para8").innerHTML = "You Engage Him In Combat, You Pull Out Your Glock19";
+        document.getElementById("para8").innerHTML = "You Engage Him In Combat, You Pull Out Your Glock-19 And Shoot Him, He Dies, But The Bullet Richochets And Hits You";
+        dead();
+    }
+    if (choiceW == "C") {
+        document.getElementById("para8").innerHTML = "You Run Too Loudly And Fall, You Crack Your Head And Die";
         dead();
     }
 }
@@ -60,7 +64,23 @@ function basement() {
     }
 }
 
-
+function groundFloor() {
+    document.getElementById("para4").innerHTML = "You Wander The Ground Floor, You Hear The Sound Of Another Student.";
+    let choiceE = prompt("Do You Try To Talk To The Student (A), Shoot Him WIth Your Glock-19 (B), Or Walk Away (C)");
+    if (choiceE == "A") {
+        document.getElementById("para5").innerHTML = "You Try To Talk To Him But He is Deaf, You Get Annoyed And Shoot Him Anyways.";
+        document.getElementById("para6").innerHTML = "You Decide It's Too Scary and Leave, Upon Leaving Cult Members Jump You";
+        dead();
+    }
+    if (choiceE == "B") {
+        document.getElementById("para5").innerHTML = "You Peak Him and Shoot Him Thrice. He Dies. He Turns Into A Zombie And Bites You.";
+        dead();
+    }
+    if (choiceE == "C") {
+        document.getElementById("para5").innerHTML = "You Walk Away And Sees That Another Student Has Entered The Building, This One Shoots You";
+        dead();
+    }
+}
 function thirdFloor(){
     document.getElementById("para4").innerHTML= "You Arrive, Noticing Little Of Interest, Until You Hear Voices";
     let choiceY = prompt("What Will You Do Next? Run Away And Return To The Ground Floor (A), Follow The Sound Of Voices (B)");

@@ -8,6 +8,11 @@ function startGame() {
     choice1();
 }
 
+function dead() {
+    document.getElementById("death").innerHTML = "YOU ARE DEAD"
+    document.getElementById("death").style.font = 500;
+}
+
 function choice1() {
     document.getElementById("para2").innerHTML = "Where Do You Want To Go";
     choiceO = prompt("The Basement (A), the Ground Floor (B), the 2nd Floor (C), or the 3rd Floor(D)")
@@ -29,6 +34,11 @@ function choice2() {
     let choiceW = prompt("Do you Scream? (A), Fight Him (B), Or Run? (C)");
     if (choiceW == "A") {
         document.getElementById("para8").innerHTML = "You Scream, And He Sees You, He Runs Towards You And Chops You In Half";
+        dead();
+    }
+    if (choiceW == "B") {
+        document.getElementById("para8").innerHTML = "You Engage Him In Combat, You Pull Out Your Glock19";
+        dead();
     }
 }
 function basement() {
@@ -45,8 +55,7 @@ function basement() {
     }
     if (choiceQ == "C") {
         document.getElementById("para6").innerHTML = "You Get Blood In Your Eye And Die Immediately";
-        document.getElementById("death").innerHTML = "YOU ARE DEAD"
-        document.getElementById("death").style.font = 500;
+        dead();
         
     }
 }
@@ -59,3 +68,4 @@ function thirdFloor(){
     if (choiceY == "A"){
         document.getElementById("para6").innerHTML = "You've Reached The Ground Floor Once More. It Has Become Significantly Darker Outside";
     choice1();}
+

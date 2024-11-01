@@ -77,7 +77,9 @@ function choice3() {
     if (choiceQ == "B") {
         document.getElementById("para3").innerHTML = "You Walk Further In.";
         document.getElementById("para4").innerHTML = "You See A Man With A Chainsaw Chopping People's Limbs Off Alive";
-        choice2();
+        document.getElementById("button1").style.display = "inline";
+        document.getElementById("button1").innerHTML = "Click To Choose";
+        document.getElementById("button1").setAttribute("onclick", "choice2();");
     }
     if (choiceQ == "C") {
         document.getElementById("para3").innerHTML = "You Get Blood In Your Eye And Die Immediately";

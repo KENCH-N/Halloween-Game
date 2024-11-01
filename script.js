@@ -23,12 +23,14 @@ function dead() {
     document.getElementById("death").innerHTML = "YOU ARE DEAD, Refresh Page To Play Again";
     document.getElementById("death").style.fontSize = "50px";
     document.getElementById("death").style.color = "Red";
+    document.getElementById("death").style.animation = "deathAnim 1s infinite";
 }
 
 function alive() {
     document.getElementById("death").innerHTML = "You Survived And Ran Away";
     document.getElementById("death").style.fontSize = "50px";
     document.getElementById("death").style.color = "Green";
+    document.getElementById("death").style.animation = "aliveAnim 1s infinite";
 }
 function choice1() {
     choiceO = prompt("The Basement (A), the Ground Floor (B), the 2nd Floor (C), or the 3rd Floor(D)")

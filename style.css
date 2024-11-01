@@ -1,0 +1,17 @@
+* {
+    text-align: center;
+}
+
+#button1 {
+    display: none;
+}
+
+@keyframes deathAnim {
+    0% {background-color: red;}
+    100% {background-color: white;}
+}
+
+@keyframes aliveAnim {
+    0% {background-color: green;}
+    100% {background-color: white;}
+}

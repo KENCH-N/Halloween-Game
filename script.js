@@ -22,6 +22,7 @@ function startGame() {
 function dead() {
     document.getElementById("death").innerHTML = "YOU ARE DEAD, Refresh Page To Play Again";
     document.getElementById("death").style.fontSize = "50px";
+    document.getElementById("death").style.color = "Red";
 }
 
 function choice1() {
@@ -140,7 +141,14 @@ function choiceR(){
     }
     if (choiceM == "B"){
         document.getElementById("para5").innerHTML = "You Jump, Closing Your Eyes And Bracing For Impact";
-        Math.random
+        let surv = Math.floor(Math.random() * 5);
+        if (surv == 3) {
+            document.getElementById("death").innerHTML = "You Survived And Ran Away";
+            document.getElementById("death").style.fontSize = "50px";
+            document.getElementById("death").style.color = "Green";
+        } else {
+            dead();
+        }
     }
     if (choiceM == "C"){
         document.getElementById("para5").innerHTML = "Their Red Eyes Turn To Look At You. You Feel Dizzy And Suddenly Black Out";

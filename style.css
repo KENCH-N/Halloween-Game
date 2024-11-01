@@ -1,4 +1,4 @@
-* {
+body {
     text-align: center;
     background-image: url("background.jpg");
     background-attachment: fixed;
@@ -13,13 +13,14 @@
 
 @keyframes deathAnim {
     0% {background-color: red;}
-    100% {background-color: white;}
+    100% {background-color: rgba(0, 0, 0, 0);}
 }
 
 @keyframes aliveAnim {
     0% {background-color: green;}
-    100% {background-color: white;}
+    100% {background-color: rgba(0, 0, 0, 0);}
 }
+
 
 .rubik {
     font-family: "Rubik Wet Paint", system-ui;
@@ -27,4 +28,9 @@
     font-style: normal;
     font-size: 50px;
   }
+
+body {
+    color: white;
+}
+
   

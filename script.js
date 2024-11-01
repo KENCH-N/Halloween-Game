@@ -25,6 +25,11 @@ function dead() {
     document.getElementById("death").style.color = "Red";
 }
 
+function alive() {
+    document.getElementById("death").innerHTML = "You Survived And Ran Away";
+    document.getElementById("death").style.fontSize = "50px";
+    document.getElementById("death").style.color = "Green";
+}
 function choice1() {
     choiceO = prompt("The Basement (A), the Ground Floor (B), the 2nd Floor (C), or the 3rd Floor(D)")
     if (choiceO == "A") {
@@ -146,9 +151,7 @@ function choiceR(){
         document.getElementById("para5").innerHTML = "You Jump, Closing Your Eyes And Bracing For Impact";
         let surv = Math.floor(Math.random() * 5);
         if (surv == 3) {
-            document.getElementById("death").innerHTML = "You Survived And Ran Away";
-            document.getElementById("death").style.fontSize = "50px";
-            document.getElementById("death").style.color = "Green";
+            alive();
         } else {
             dead();
         }

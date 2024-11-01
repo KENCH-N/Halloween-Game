@@ -1,6 +1,6 @@
 let name, choiceO, choiceQ, choice;
 
-
+// Clear funtion to remove lines when you either go to another floor
 function clear1() {
     document.getElementById("para1").innerHTML = "";
     document.getElementById("para2").innerHTML = "";
@@ -8,7 +8,7 @@ function clear1() {
     document.getElementById("para4").innerHTML = "";
     document.getElementById("para5").innerHTML = "";
 }
-
+// Starts the game, asks prompts about your name.
 function startGame() {
     alert("Game Has Started");
     name = prompt("What Is Your Name?");
@@ -18,18 +18,19 @@ function startGame() {
     document.getElementById("button1").innerHTML = "Click To Choose";
     document.getElementById("button1").setAttribute("onclick", "clear1(); choice1()");
 }
-
+// Calls when you die
 function dead() {
     document.getElementById("death").innerHTML = "YOU ARE DEAD, Refresh Page To Play Again";
     document.getElementById("death").style.color = "Red";
     document.getElementById("death").style.animation = "deathAnim 1s infinite";
 }
-
+// Calls when you live
 function alive() {
     document.getElementById("death").innerHTML = "You Survived And Ran Away";
     document.getElementById("death").style.color = "Green";
     document.getElementById("death").style.animation = "aliveAnim 1s infinite";
 }
+// The first choice in the game, which floor you want to go
 function choice1() {
     choiceO = prompt("The Basement (A), the Ground Floor (B), the 2nd Floor (C), or the 3rd Floor(D)")
     if (choiceO == "A") {
@@ -49,7 +50,7 @@ function choice1() {
         thirdFloor();
     }
 }
-
+// Second choice if you go into the basement
 function choice2() {
     let choiceW = prompt("Do you Scream? (A), Fight Him (B), Or Run? (C)");
     if (choiceW == "A") {
@@ -65,7 +66,7 @@ function choice2() {
         dead();
     }
 }
-
+// Choice to stay in the basement or go back
 function choice3() {
     let choiceQ = prompt("What Do You Do? Run Away And Return To The Ground Floor (A), Investigate Further (B), Play With Human Parts (C).");
     if (choiceQ == "A") {
@@ -87,14 +88,14 @@ function choice3() {
         
     }
 }
-
+// The basement 
 function basement() {
     document.getElementById("para2").innerHTML = "You Find Human Parts Laying Around Randomly";
     document.getElementById("button1").style.display = "inline";
     document.getElementById("button1").innerHTML = "Click To Choose";
     document.getElementById("button1").setAttribute("onclick", "choice3()");
 }
-
+// First choice on ground floor
 function choice4() {
     let choiceE = prompt("Do You Try To Talk To The Student (A), Shoot Him WIth Your Glock-19 (B), Or Walk Away (C)");
     if (choiceE == "A") {
@@ -111,14 +112,14 @@ function choice4() {
         dead();
     }
 }
-
+// Ground floor
 function groundFloor() {
     document.getElementById("para2").innerHTML = "You Wander The Ground Floor, You Hear The Sound Of Another Student.";
     document.getElementById("button1").style.display = "inline";
     document.getElementById("button1").innerHTML = "Click To Choose";
     document.getElementById("button1").setAttribute("onclick", "choice4()");
 }
-
+// First choice on floor 3
 function choice5() {
     let choiceY = prompt("What Will You Do Next? Run Away And Return To The Ground Floor (A), Follow The Sound Of Voices (B)");
     if (choiceY == "A"){
@@ -135,14 +136,14 @@ function choice5() {
         document.getElementById("button1").setAttribute("onclick", "choiceR()");
     }
 }
-
+// third floor function
 function thirdFloor(){
     document.getElementById("para2").innerHTML= "You Arrive, Noticing Little Of Interest, Until You Hear Voices";
     document.getElementById("button1").style.display = "inline";
     document.getElementById("button1").innerHTML = "Click To Choose";
     document.getElementById("button1").setAttribute("onclick", "choice5()");
 }
-
+// Second choice on third floor
 function choiceR(){
     let choiceM = prompt("Do You Freeze (A), Jump (B), Call Out(C)")
     if (choiceM == "A"){
@@ -163,7 +164,7 @@ function choiceR(){
         dead();
     }
 } 
-
+// second floor which is blocked off
 function secondFloor(){
     document.getElementById("para2").innerHTML ="The Door Is Barred, And Will Not Open"
     document.getElementById("button1").style.display = "inline";

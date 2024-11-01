@@ -1,3 +1,4 @@
+/* Creates a background image */
 body {
     text-align: center;
     background-image: url("background.jpg");
@@ -6,29 +7,28 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+/* Tells all buttons to be invisible */
 #button1 {
     display: none;
 }
-
+/* death animation */
 @keyframes deathAnim {
     0% {background-color: red;}
     100% {background-color: rgba(0, 0, 0, 0);}
 }
-
+/* The animation for when you live */
 @keyframes aliveAnim {
     0% {background-color: green;}
     100% {background-color: rgba(0, 0, 0, 0);}
 }
-
-
+/* Font for title */
 .rubik {
     font-family: "Rubik Wet Paint", system-ui;
     font-weight: 400;
     font-style: normal;
     font-size: 50px;
   }
-
+/* Font for text */
 body {
     color: white;
 }

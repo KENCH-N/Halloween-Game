@@ -8,6 +8,7 @@ function clear1() {
     document.getElementById("para4").innerHTML = "";
     document.getElementById("para5").innerHTML = "";
 }
+
 function startGame() {
     alert("Game Has Started");
     name = prompt("What Is Your Name?");
@@ -17,7 +18,6 @@ function startGame() {
     document.getElementById("button1").innerHTML = "Click To Choose";
     document.getElementById("button1").setAttribute("onclick", "clear1(); choice1()");
 }
-
 
 function dead() {
     document.getElementById("death").innerHTML = "YOU ARE DEAD, Refresh Page To Play Again";
@@ -80,6 +80,7 @@ function choice3() {
         
     }
 }
+
 function basement() {
     document.getElementById("para2").innerHTML = "You Find Human Parts Laying Around Randomly";
     document.getElementById("button1").style.display = "inline";
@@ -103,6 +104,7 @@ function choice4() {
         dead();
     }
 }
+
 function groundFloor() {
     document.getElementById("para2").innerHTML = "You Wander The Ground Floor, You Hear The Sound Of Another Student.";
     document.getElementById("button1").style.display = "inline";
@@ -126,6 +128,7 @@ function choice5() {
         document.getElementById("button1").setAttribute("onclick", "choiceR()");
     }
 }
+
 function thirdFloor(){
     document.getElementById("para2").innerHTML= "You Arrive, Noticing Little Of Interest, Until You Hear Voices";
     document.getElementById("button1").style.display = "inline";
